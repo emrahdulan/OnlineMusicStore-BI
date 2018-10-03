@@ -1,0 +1,278 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3778af29-3117-4ff6-946b-b833610cee74" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Online Music Store FIT DW</ID>
+  <Name>Online Music Store FIT DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>OnlineMusicStoreFITDW</DataSourceID>
+  <Schema>
+    <xs:schema id="Online_x0020_Music_x0020_Store_x0020_FIT_x0020_DW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Online_x0020_Music_x0020_Store_x0020_FIT_x0020_DW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="4599e6da-8ada-4818-b0b8-9344e846d508">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_DimAlbum" msprop:design-time-name="37779f41-93be-4c35-a28f-ab4ad3b3b44a" msprop:DbTableName="DimAlbum" msprop:FriendlyName="DimAlbum" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AlbumKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="098d60ec-bd78-42dd-8114-0e31df2abf0b" msprop:DbColumnName="AlbumKey" msprop:FriendlyName="AlbumKey" type="xs:int" />
+                  <xs:element name="AlbumAltKey" msprop:design-time-name="b34ccce3-1b73-45d6-825e-7928e8348dc1" msprop:DbColumnName="AlbumAltKey" msprop:FriendlyName="AlbumAltKey" type="xs:int" />
+                  <xs:element name="AlbumName" msprop:design-time-name="2e9c3a58-03d1-45ba-99f8-d61c2546a269" msprop:DbColumnName="AlbumName" msprop:FriendlyName="AlbumName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimArtist" msprop:design-time-name="7f362a80-18a2-4787-81b4-737c935205f2" msprop:DbTableName="DimArtist" msprop:FriendlyName="DimArtist" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ArtistKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="1430239e-e3e6-424d-b8a3-4d06095c53c0" msprop:DbColumnName="ArtistKey" msprop:FriendlyName="ArtistKey" type="xs:int" />
+                  <xs:element name="ArtistAltKey" msprop:design-time-name="c31df543-dd16-45e7-993b-4b69bd51f844" msprop:DbColumnName="ArtistAltKey" msprop:FriendlyName="ArtistAltKey" type="xs:int" />
+                  <xs:element name="ArtistName" msprop:design-time-name="227a1acb-2384-42db-a1e5-b77606439f23" msprop:DbColumnName="ArtistName" msprop:FriendlyName="ArtistName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimDate" msprop:design-time-name="01bcd315-55a7-466e-8afb-e5309de18d3f" msprop:DbTableName="DimDate" msprop:FriendlyName="DimDate" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DateKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="296443e4-da72-4c54-8cf6-aa2485c415b0" msprop:DbColumnName="DateKey" msprop:FriendlyName="DateKey" type="xs:int" />
+                  <xs:element name="DateAltKey" msprop:design-time-name="17637e2e-237e-4733-8510-ba0ea9710fab" msprop:DbColumnName="DateAltKey" msprop:FriendlyName="DateAltKey" type="xs:dateTime" />
+                  <xs:element name="Day" msprop:design-time-name="5e6b8d4d-54b6-44fe-a9ce-0df44de3aefb" msprop:DbColumnName="Day" msprop:FriendlyName="Day" type="xs:int" minOccurs="0" />
+                  <xs:element name="Month" msprop:design-time-name="3a27410b-7922-4d9c-bfee-8f7f099ef710" msprop:DbColumnName="Month" msprop:FriendlyName="Month" type="xs:int" minOccurs="0" />
+                  <xs:element name="Year" msprop:design-time-name="3d72c6a5-beba-49d9-900b-eb978d109fc3" msprop:DbColumnName="Year" msprop:FriendlyName="Year" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimGender" msprop:design-time-name="41981ad7-1d64-4c06-84f1-f909dbaf7701" msprop:DbTableName="DimGender" msprop:FriendlyName="DimGender" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="GenderKey" msprop:design-time-name="535a0286-c064-41fc-9a08-b97b3705e3fb" msprop:DbColumnName="GenderKey" msprop:FriendlyName="GenderKey">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="6" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimGenre" msprop:design-time-name="f7180daf-879a-4bf4-bd36-96804de9d023" msprop:DbTableName="DimGenre" msprop:FriendlyName="DimGenre" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="GenreKey" msprop:design-time-name="4aaefdde-0df2-4784-bf3b-c1444d67aa22" msprop:DbColumnName="GenreKey" msprop:FriendlyName="GenreKey">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimLabel" msprop:design-time-name="ee73cd65-8728-428c-9e01-31dd0e81fb2b" msprop:DbTableName="DimLabel" msprop:FriendlyName="DimLabel" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="LabelKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="ea221b4f-f0e0-40ad-8b9f-6cd21079ecc9" msprop:DbColumnName="LabelKey" msprop:FriendlyName="LabelKey" type="xs:int" />
+                  <xs:element name="LabelAltKey" msprop:design-time-name="b6026915-3995-480a-ad3a-eeebcdf7005c" msprop:DbColumnName="LabelAltKey" msprop:FriendlyName="LabelAltKey" type="xs:int" />
+                  <xs:element name="LabelName" msprop:design-time-name="d565423e-a674-4fb6-bbd1-1a9b6e92ca38" msprop:DbColumnName="LabelName" msprop:FriendlyName="LabelName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimLocation" msprop:design-time-name="0cc532ef-2d0c-46f5-ba6e-ef4278005e58" msprop:DbTableName="DimLocation" msprop:FriendlyName="DimLocation" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="LocationKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="24043c50-130c-414d-bf37-31e9430f34c7" msprop:DbColumnName="LocationKey" msprop:FriendlyName="LocationKey" type="xs:int" />
+                  <xs:element name="LocationAltKey" msprop:design-time-name="c51ed4bd-a829-480e-83a5-fa2a3dc35635" msprop:DbColumnName="LocationAltKey" msprop:FriendlyName="LocationAltKey" type="xs:int" />
+                  <xs:element name="City" msprop:design-time-name="4943ceac-85c5-43d8-a85d-59c5e8e02069" msprop:DbColumnName="City" msprop:FriendlyName="City" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Country" msprop:design-time-name="7af21bd8-90e6-4842-9cd8-4d2251836349" msprop:DbColumnName="Country" msprop:FriendlyName="Country" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Region" msprop:design-time-name="77419492-abcf-41ff-9e7c-340b430c6eb0" msprop:DbColumnName="Region" msprop:FriendlyName="Region" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimSong" msprop:design-time-name="462aa2ad-92b7-4d4f-bdab-99c993752b62" msprop:DbTableName="DimSong" msprop:FriendlyName="DimSong" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SongKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="afc9ae7a-ee00-4291-9869-8dd71620d2ab" msprop:DbColumnName="SongKey" msprop:FriendlyName="SongKey" type="xs:int" />
+                  <xs:element name="SongAltKey" msprop:design-time-name="7c2a3a23-7fa0-4873-bcd5-c44a5d303566" msprop:DbColumnName="SongAltKey" msprop:FriendlyName="SongAltKey" type="xs:int" />
+                  <xs:element name="SongName" msprop:design-time-name="a2db864c-cd2a-49a1-8497-705d106eb6c4" msprop:DbColumnName="SongName" msprop:FriendlyName="SongName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Price" msprop:design-time-name="b0955389-3435-41c0-b167-524b07944024" msprop:DbColumnName="Price" msprop:FriendlyName="Price" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Rating" msprop:design-time-name="4198d9da-4d8b-4644-a15c-dca5741dfeb7" msprop:DbColumnName="Rating" msprop:FriendlyName="Rating" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FactSales" msprop:design-time-name="4798019e-09c5-4ce9-9ad3-9d575fe61751" msprop:DbTableName="FactSales" msprop:FriendlyName="FactSales" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SalesKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="e60776e9-d7cd-4da1-8d77-72b41a8f6506" msprop:DbColumnName="SalesKey" msprop:FriendlyName="SalesKey" type="xs:int" />
+                  <xs:element name="LocationKey" msprop:design-time-name="0d967ff6-dcaf-49e8-b91a-a3db17ece2dd" msprop:DbColumnName="LocationKey" msprop:FriendlyName="LocationKey" type="xs:int" />
+                  <xs:element name="SongKey" msprop:design-time-name="bd4b7541-95c2-43fc-a6ed-fd251ae08124" msprop:DbColumnName="SongKey" msprop:FriendlyName="SongKey" type="xs:int" />
+                  <xs:element name="DateKey" msprop:design-time-name="661733f1-9829-4699-93c0-f029ac5ff5da" msprop:DbColumnName="DateKey" msprop:FriendlyName="DateKey" type="xs:int" />
+                  <xs:element name="GenderKey" msprop:design-time-name="48272fa6-06d2-43b2-ac54-a580f50668c7" msprop:DbColumnName="GenderKey" msprop:FriendlyName="GenderKey">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="6" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GenreKey" msprop:design-time-name="dfafc5ed-1d69-4e65-bfd8-915fbbfa2837" msprop:DbColumnName="GenreKey" msprop:FriendlyName="GenreKey">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AlbumKey" msprop:design-time-name="bd15ca94-7e5b-4e52-8342-77abb8c8f260" msprop:DbColumnName="AlbumKey" msprop:FriendlyName="AlbumKey" type="xs:int" />
+                  <xs:element name="ArtistKey" msprop:design-time-name="a52e459f-8068-4704-89d8-990aa68dff4f" msprop:DbColumnName="ArtistKey" msprop:FriendlyName="ArtistKey" type="xs:int" />
+                  <xs:element name="LabelKey" msprop:design-time-name="d35d8272-c33e-4b51-abd1-cc0873f4c15a" msprop:DbColumnName="LabelKey" msprop:FriendlyName="LabelKey" type="xs:int" />
+                  <xs:element name="TotalProfit" msprop:design-time-name="f522137a-87e3-44ac-a504-52e15b7f9f78" msprop:DbColumnName="TotalProfit" msprop:FriendlyName="TotalProfit" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimAlbum" />
+          <xs:field xpath="AlbumKey" />
+        </xs:unique>
+        <xs:unique name="dbo_DimArtist_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimArtist" />
+          <xs:field xpath="ArtistKey" />
+        </xs:unique>
+        <xs:unique name="dbo_DimDate_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimDate" />
+          <xs:field xpath="DateKey" />
+        </xs:unique>
+        <xs:unique name="dbo_DimGender_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimGender" />
+          <xs:field xpath="GenderKey" />
+        </xs:unique>
+        <xs:unique name="dbo_DimGenre_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimGenre" />
+          <xs:field xpath="GenreKey" />
+        </xs:unique>
+        <xs:unique name="dbo_DimLabel_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimLabel" />
+          <xs:field xpath="LabelKey" />
+        </xs:unique>
+        <xs:unique name="dbo_DimLocation_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimLocation" />
+          <xs:field xpath="LocationKey" />
+        </xs:unique>
+        <xs:unique name="dbo_DimSong_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimSong" />
+          <xs:field xpath="SongKey" />
+        </xs:unique>
+        <xs:unique name="dbo_FactSales_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FactSales" />
+          <xs:field xpath="SalesKey" />
+        </xs:unique>
+        <xs:keyref name="FK_FactSales_Genre" refer="dbo_DimGenre_Constraint1">
+          <xs:selector xpath=".//dbo_FactSales" />
+          <xs:field xpath="GenreKey" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactSales_Location" refer="dbo_DimLocation_Constraint1">
+          <xs:selector xpath=".//dbo_FactSales" />
+          <xs:field xpath="LocationKey" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactSales_Song" refer="dbo_DimSong_Constraint1">
+          <xs:selector xpath=".//dbo_FactSales" />
+          <xs:field xpath="SongKey" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactSales_Album" refer="Constraint1">
+          <xs:selector xpath=".//dbo_FactSales" />
+          <xs:field xpath="AlbumKey" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactSales_Gender" refer="dbo_DimGender_Constraint1">
+          <xs:selector xpath=".//dbo_FactSales" />
+          <xs:field xpath="GenderKey" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactSales_Label" refer="dbo_DimLabel_Constraint1">
+          <xs:selector xpath=".//dbo_FactSales" />
+          <xs:field xpath="LabelKey" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactSales_Artist" refer="dbo_DimArtist_Constraint1">
+          <xs:selector xpath=".//dbo_FactSales" />
+          <xs:field xpath="ArtistKey" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactSales_Date" refer="dbo_DimDate_Constraint1">
+          <xs:selector xpath=".//dbo_FactSales" />
+          <xs:field xpath="DateKey" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Online_x0020_Music_x0020_Store_x0020_FIT_x0020_DW xmlns="" />
+  </Schema>
+</DataSourceView>
