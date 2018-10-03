@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SSIS", "SSIS\SSIS.dtproj", "{C894A257-C106-47C8-8633-DC46189B14EE}"
 EndProject
@@ -10,6 +10,18 @@ EndProject
 Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "TABULAR", "TABULAR\TABULAR.smproj", "{8CE414BB-95B2-4C99-9E03-51BA72086E22}"
 EndProject
 Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "SSRS", "SSRS\SSRS.rptproj", "{B8CA3ADC-4D1A-45F4-81C9-FEEC88B339EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{B5EF9208-244A-43AF-A8E6-B8D9CFB32819}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Documents\Online_Music_Store_Database.sql = ..\..\..\Documents\Online_Music_Store_Database.sql
+		..\..\..\Documents\Online_Music_Store_Database_Data.sql = ..\..\..\Documents\Online_Music_Store_Database_Data.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataWarehouse", "DataWarehouse", "{5D51C97D-873F-4206-BF59-D28EEC1C1DC4}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Documents\Online_Music_Store_DataWarehouse.sql = ..\..\..\Documents\Online_Music_Store_DataWarehouse.sql
+		..\..\..\Documents\Online_Music_Store_DataWarehouse_Data.sql = ..\..\..\Documents\Online_Music_Store_DataWarehouse_Data.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,5 +76,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC6DDD4D-D3BC-44E7-9755-09DD1FADE286}
 	EndGlobalSection
 EndGlobal
